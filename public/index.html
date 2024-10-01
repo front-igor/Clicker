@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Боровик-taps</title>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    window.onload = function () {
+      const tg = window.Telegram.WebApp;
+
+      tg.ready();
+
+      if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
+        const user = tg.initDataUnsafe.user;
+        const userName = `${user.first_name} ${user.last_name || ''}`.trim();
+
+        console.log("User Name:", userName);
+
+        // document.getElementById('user-info').innerHTML = `
+        //   <p><strong>ID пользователя:</strong> ${user.id}</p>
+        //   <p><strong>Имя:</strong> ${user.first_name}</p>
+        //   <p><strong>Фамилия:</strong> ${user.last_name || ''}</p>
+        //   <p><strong>Юзернейм:</strong> ${user.username || ''}</p>
+        //   `;
+      } else {
+        console.error("Данные пользователя недоступны");
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div id="user-info"></div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Raleway";
+	src: url("./Raleway/Raleway-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "SFPro-Medium";
+	src: url("./SFPro/SFProText-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "SFPro-Semibold";
+	src: url("./SFPro/SFProText-Semibold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "SFPro-Bold";
+	src: url("./SFPro/SFProText-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
